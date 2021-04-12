@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/sheetsFragment">
+
+    <fragment
+        android:id="@+id/sheetsFragment"
+        android:name="pl.edu.wat.androidarchitecture.ui.sheets.SheetsFragment"
+        android:label="Sheets"
+        tools:layout="@layout/sheets_fragment">
+
+        <action
+            android:id="@+id/action_sheetsFragment_to_sheetDetailsFragment"
+            app:destination="@id/sheetDetailsFragment" />
+        <action
+            android:id="@+id/action_sheetsFragment_to_createSheetFragment"
+            app:destination="@id/createSheetFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createSheetFragment"
+        android:name="pl.edu.wat.androidarchitecture.ui.sheet.create.CreateSheetFragment"
+        android:label="Create sheet"
+        tools:layout="@layout/create_sheet_fragment" />
+    <fragment
+        android:id="@+id/sheetDetailsFragment"
+        android:name="pl.edu.wat.androidarchitecture.ui.sheet.SheetFragment"
+        android:label="Sheet Details"
+        tools:layout="@layout/sheet_fragment">
+
+        <action
+            android:id="@+id/action_sheetsFragment_to_createFinancialElementFragment"
+            app:destination="@id/createFinancialElementFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createFinancialElementFragment"
+        android:name="pl.edu.wat.androidarchitecture.ui.financial.CreateFinancialElementFragment"
+        tools:layout="@layout/create_financial_element_fragment" />
+
+
+</navigation>
